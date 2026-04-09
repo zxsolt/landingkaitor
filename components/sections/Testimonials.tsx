@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useRef } from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 
@@ -115,7 +114,7 @@ function TestimonialCard({ t, i }: { t: (typeof testimonials)[0]; i: number }) {
             className="text-5xl leading-none mb-2 font-serif select-none"
             style={{ color: "rgba(0,212,160,0.15)" }}
           >
-            "
+            &ldquo;
           </div>
 
           {/* Quote text */}

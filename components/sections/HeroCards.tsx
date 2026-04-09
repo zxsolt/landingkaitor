@@ -618,6 +618,13 @@ function Idea5ProcessMap() {
    ACTIVO AHORA → Idea 1
    Para cambiar: comenta la línea activa y descomenta otra.
 ───────────────────────────────────────────────────────────────────────────── */
+export const archivedHeroIdeas = [
+  Idea1NodeNetwork,
+  Idea2ParticleFlow,
+  Idea3GridTransform,
+  Idea4CodeSpiral,
+] as const;
+
 export default function HeroCards() {
   // return <Idea1NodeNetwork />;      // IDEA 1 — descartada
   // return <Idea2ParticleFlow />;    // IDEA 2 — descartada

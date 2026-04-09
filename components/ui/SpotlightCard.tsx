@@ -21,14 +21,12 @@ export default function SpotlightCard({
   as: Tag = "div",
   onClick,
 }: SpotlightCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
   const spotRef = useRef<HTMLDivElement>(null);
 
-  const onMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    const card = cardRef.current;
+  const onMouseMove = (e: MouseEvent<HTMLElement>) => {
     const spot = spotRef.current;
-    if (!card || !spot) return;
-    const rect = card.getBoundingClientRect();
+    if (!spot) return;
+    const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     spot.style.background = `radial-gradient(${radius}px circle at ${x}px ${y}px, ${color}, transparent 70%)`;
@@ -40,8 +38,7 @@ export default function SpotlightCard({
   };
 
   return (
-    <div
-      ref={cardRef}
+    <Tag
       className={`relative overflow-hidden ${className}`}
       style={style}
       onMouseMove={onMouseMove}
@@ -57,6 +54,6 @@ export default function SpotlightCard({
       />
       {/* Content must be above spotlight */}
       <div className="relative z-10 h-full flex flex-col">{children}</div>
-    </div>
+    </Tag>
   );
 }
