@@ -46,16 +46,16 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between gap-6 py-5 text-left group"
       >
-        <span className={`text-sm font-semibold leading-snug transition-colors duration-200 ${open ? "text-[#00D4A0]" : "text-[#F0F0F0]/80 group-hover:text-[#F0F0F0]"}`}>
+        <span className={`text-sm font-semibold leading-snug transition-colors duration-200 ${open ? "text-[#02c978]" : "text-[#F0F0F0]/80 group-hover:text-[#F0F0F0]"}`}>
           {q}
         </span>
         <motion.div
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.25 }}
-          className="shrink-0 w-6 h-6 rounded-full border border-[#F0F0F0]/10 flex items-center justify-center group-hover:border-[#00D4A0]/30 transition-colors duration-200"
+          className="shrink-0 w-6 h-6 rounded-full border border-[#F0F0F0]/10 flex items-center justify-center group-hover:border-[#02c978]/30 transition-colors duration-200"
         >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-            <path d="M5 1v8M1 5h8" stroke={open ? "#00D4A0" : "rgba(240,240,240,0.5)"} strokeWidth="1.4" strokeLinecap="round"/>
+            <path d="M5 1v8M1 5h8" stroke={open ? "#02c978" : "rgba(240,240,240,0.5)"} strokeWidth="1.4" strokeLinecap="round"/>
           </svg>
         </motion.div>
       </button>
@@ -89,7 +89,7 @@ export default function FAQ() {
         style={{
           width: 700,
           height: 500,
-          background: "radial-gradient(circle, rgba(0,212,160,0.09) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(2,201,120,0.09) 0%, transparent 65%)",
           filter: "blur(80px)",
         }}
       />
@@ -114,7 +114,7 @@ export default function FAQ() {
             </p>
             <a
               href="mailto:hola@kaitor.com"
-              className="inline-flex items-center gap-2 mt-6 text-sm font-mono text-[#00D4A0]/70 hover:text-[#00D4A0] transition-colors duration-200"
+              className="inline-flex items-center gap-2 mt-6 text-sm font-mono text-[#02c978]/70 hover:text-[#02c978] transition-colors duration-200"
             >
               hola@kaitor.com
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

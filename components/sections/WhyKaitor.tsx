@@ -1,175 +1,147 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import SectionLabel from "@/components/ui/SectionLabel";
-import SpotlightCard from "@/components/ui/SpotlightCard";
+import Link from "next/link";
 
-const reasons = [
+const blocks = [
   {
-    tag: "Pricing",
-    title: "Precio cerrado desde el primer día",
-    body: "Sabes exactamente cuánto vas a pagar antes de empezar. Sin sorpresas, sin reuniones para justificar horas, sin letra pequeña.",
-    metric: "Precio cerrado",
-    metricLabel: "antes de empezar",
+    tag: "01 · BUILD",
+    title: "Construimos",
+    body: "Precio cerrado, alcance definido. El código queda en tu empresa, no en la nuestra.",
   },
   {
-    tag: "Comunicación",
-    title: "Trato directo, sin intermediarios",
-    body: "Hablas con quien resuelve el problema, no con un account manager. Sin tecnicismos, sin traducciones — directo al grano.",
-    metric: "Trato directo",
-    metricLabel: "con quien te resuelve",
+    tag: "02 · OPERATE",
+    title: "Operamos",
+    body: "Mantenemos, monitorizamos y mejoramos lo construido. Sin que tengas que contratar a nadie.",
   },
   {
-    tag: "Compromiso",
-    title: "Sin contratos de permanencia",
-    body: "No te atamos. Si en algún momento no tiene sentido seguir, no hay penalización. Nos quedamos porque aportamos valor, no porque firmes un contrato.",
-    metric: "Sin permanencia",
-    metricLabel: "cancela cuando quieras",
+    tag: "03 · EXPAND",
+    title: "Crecemos",
+    body: "Cuando necesitas más, construimos más. Tu tecnología crece con tu negocio.",
   },
 ];
 
-function ReasonCard({ r, i }: { r: (typeof reasons)[0]; i: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  const rotateX = useMotionValue(0);
-  const rotateY = useMotionValue(0);
-  const springX = useSpring(rotateX, { stiffness: 200, damping: 25 });
-  const springY = useSpring(rotateY, { stiffness: 200, damping: 25 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    rotateX.set(((e.clientY - cy) / (rect.height / 2)) * -5);
-    rotateY.set(((e.clientX - cx) / (rect.width / 2)) * 5);
-  };
-
-  const handleMouseLeave = () => {
-    rotateX.set(0);
-    rotateY.set(0);
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: i * 0.12 }}
-      style={{ rotateX: springX, rotateY: springY, transformPerspective: 800 }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="h-full"
-    >
-      <SpotlightCard
-        className="h-full rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#00D4A0]/20 transition-colors duration-300 flex flex-col overflow-hidden"
-        style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)" }}
-      >
-        <div className="p-7 flex flex-col flex-1">
-          {/* tag */}
-          <span className="font-mono text-[10px] text-[#F0F0F0]/20 tracking-widest uppercase mb-6 block">
-            {r.tag}
-          </span>
-
-          {/* Metric — reveals with blur when in view */}
-          <div className="mb-6">
-            <motion.div
-              initial={{ opacity: 0, filter: "blur(8px)", scale: 0.9 }}
-              animate={inView ? { opacity: 1, filter: "blur(0px)", scale: 1 } : {}}
-              transition={{ duration: 0.7, delay: i * 0.12 + 0.3, ease: "easeOut" }}
-              className="text-2xl font-black text-[#00D4A0] leading-none"
-              style={{ textShadow: "0 0 40px rgba(0,212,160,0.4)" }}
-            >
-              {r.metric}
-            </motion.div>
-            <div className="font-mono text-[10px] text-[#F0F0F0]/30 tracking-wide mt-1">
-              {r.metricLabel}
-            </div>
-          </div>
-
-          {/* Title */}
-          <h3 className="text-base font-bold text-[#F0F0F0] mb-3 leading-snug">
-            {r.title}
-          </h3>
-
-          {/* Body */}
-          <p className="text-[#F0F0F0]/40 text-sm leading-relaxed flex-1">
-            {r.body}
-          </p>
-
-          {/* Background glow */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            style={{
-              background: "radial-gradient(circle at 50% 0%, rgba(0,212,160,0.08) 0%, transparent 70%)",
-            }}
-          />
-        </div>
-      </SpotlightCard>
-    </motion.div>
-  );
-}
+const pills = ["El código es tuyo", "Sin contratos", "Trato directo", "Respuesta en 24h"];
 
 export default function WhyKaitor() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
-    <section id="por-que-kaitor" className="relative py-28 md:py-36 px-6 section-alt" style={{ overflow: "clip" }}>
-      {/* Top glow */}
+    <section
+      id="por-que-kaitor"
+      ref={ref}
+      className="relative py-24 md:py-32 px-6 overflow-hidden"
+      style={{ background: "#014d2f" }}
+    >
+      {/* Subtle noise on green */}
       <div
         aria-hidden="true"
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 50% 0%, rgba(0,212,160,0.08) 0%, transparent 70%)",
-          filter: "blur(40px)",
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")",
+          opacity: 0.04,
         }}
       />
 
-      {/* Ghost "KAITOR" behind cards */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
-      >
-        <span
-          style={{
-            fontSize: "clamp(100px, 22vw, 260px)",
-            fontWeight: 900,
-            letterSpacing: "-0.05em",
-            color: "transparent",
-            WebkitTextStroke: "1px rgba(0,212,160,0.045)",
-            lineHeight: 1,
-            userSelect: "none",
-            whiteSpace: "nowrap",
-          }}
-        >
-          KAITOR
-        </span>
-      </div>
-
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="max-w-4xl mb-16"
-        >
-          <SectionLabel>Por qué Kaitor</SectionLabel>
-          <h2 className="text-[clamp(1.6rem,3.5vw,2.6rem)] font-black leading-[1.1] tracking-tight text-[#F0F0F0] mt-2">
-            Precio cerrado desde el primer día.
+        <div className="mb-16">
+          <span
+            className="font-mono text-[10px] tracking-widest uppercase block mb-4"
+            style={{ color: "rgba(2,201,120,0.55)" }}
+          >
+            Por qué Kaitor
+          </span>
+          <motion.h2
+            initial={{ opacity: 0, y: 24 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7 }}
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(2.6rem,5vw,4.4rem)",
+              fontWeight: 700,
+              letterSpacing: "-0.035em",
+              lineHeight: 1.04,
+              color: "#f0f5f2",
+            }}
+          >
+            Construimos.
             <br />
-            Trato directo, sin intermediarios.
+            Operamos.
             <br />
-            <span className="text-[#00D4A0]">Sin contratos de permanencia.</span>
-          </h2>
-        </motion.div>
+            Crecemos contigo.
+          </motion.h2>
+        </div>
 
-        {/* Reason cards */}
-        <div className="grid md:grid-cols-3 gap-4">
-          {reasons.map((r, i) => (
-            <ReasonCard key={i} r={r} i={i} />
+        {/* 3 blocks */}
+        <div className="grid md:grid-cols-3 gap-4 mb-12">
+          {blocks.map((b, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.15 + i * 0.1 }}
+              className="rounded-2xl p-6 flex flex-col gap-3"
+              style={{
+                background: "#080b0a",
+                border: "1px solid rgba(8,11,10,0.3)",
+              }}
+            >
+              <span
+                className="font-mono text-[9px] tracking-widest uppercase"
+                style={{ color: "rgba(2,201,120,0.6)" }}
+              >
+                {b.tag}
+              </span>
+              <h3
+                className="text-xl font-bold"
+                style={{ fontFamily: "var(--font-display)", color: "#f0f5f2", letterSpacing: "-0.025em" }}
+              >
+                {b.title}
+              </h3>
+              <p className="text-sm leading-relaxed" style={{ color: "rgba(240,245,242,0.5)" }}>
+                {b.body}
+              </p>
+            </motion.div>
           ))}
         </div>
+
+        {/* Trust pills + CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+        >
+          <div className="flex flex-wrap gap-2">
+            {pills.map((p, i) => (
+              <span
+                key={i}
+                className="px-3 py-1.5 rounded-full text-xs font-medium"
+                style={{
+                  background: "rgba(2,201,120,0.12)",
+                  color: "#f0f5f2",
+                  border: "1px solid rgba(2,201,120,0.2)",
+                }}
+              >
+                {p}
+              </span>
+            ))}
+          </div>
+          <Link
+            href="#contacto"
+            className="shrink-0 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:scale-105 flex items-center gap-2"
+            style={{
+              background: "#02c978",
+              color: "#080b0a",
+            }}
+          >
+            Diagnóstico gratuito →
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

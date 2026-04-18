@@ -15,8 +15,8 @@ function Track() {
       {doubled.map((item, i) => (
         <div key={i} className="flex items-center gap-3 shrink-0">
           <span
-            className="w-1 h-1 rounded-full bg-[#00D4A0] shrink-0"
-            style={{ boxShadow: "0 0 6px rgba(0,212,160,0.8)" }}
+            className="w-1 h-1 rounded-full bg-[#02c978] shrink-0"
+            style={{ boxShadow: "0 0 6px rgba(2,201,120,0.8)" }}
           />
           <span className="font-mono text-xs text-[#F0F0F0]/35 tracking-wide whitespace-nowrap">
             {item}
@@ -41,8 +41,8 @@ export default function TrustBar() {
       `}</style>
 
       {/* Edge fades */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #06080B, transparent)" }} />
-      <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #06080B, transparent)" }} />
+      <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #080b0a, transparent)" }} />
+      <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #080b0a, transparent)" }} />
 
       <div className="marquee-track">
         <Track />

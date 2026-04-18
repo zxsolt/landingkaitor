@@ -55,7 +55,7 @@ export default function Services() {
         aria-hidden="true"
         className="absolute right-0 top-1/3 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(0,212,160,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(2,201,120,0.07) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -101,16 +101,16 @@ export default function Services() {
             <motion.div
               key={i}
               variants={item}
-              className="group relative p-6 rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#00D4A0]/20 transition-all duration-400 flex flex-col"
+              className="group relative p-6 rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#02c978]/20 transition-all duration-400 flex flex-col"
               style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)" }}
               whileHover={{
-                boxShadow: "0 8px 40px rgba(0,212,160,0.08), inset 0 1px 0 rgba(255,255,255,0.02)",
+                boxShadow: "0 8px 40px rgba(2,201,120,0.08), inset 0 1px 0 rgba(255,255,255,0.02)",
                 y: -3,
                 transition: { duration: 0.3 },
               }}
             >
               {/* Label */}
-              <span className="font-mono text-[10px] text-[#00D4A0]/50 tracking-widest uppercase mb-4 block">
+              <span className="font-mono text-[10px] text-[#02c978]/50 tracking-widest uppercase mb-4 block">
                 {p.label}
               </span>
 
@@ -125,10 +125,10 @@ export default function Services() {
               </p>
 
               {/* CTA line */}
-              <div className="mt-5 flex items-center gap-2 text-[#00D4A0] text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="mt-5 flex items-center gap-2 text-[#02c978] text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span
                   className="w-4 h-px"
-                  style={{ background: "#00D4A0" }}
+                  style={{ background: "#02c978" }}
                 />
                 {p.cta}
               </div>
@@ -145,12 +145,12 @@ export default function Services() {
             variants={item}
             className="group relative p-6 rounded-2xl flex flex-col justify-between overflow-hidden"
             style={{
-              background: "linear-gradient(135deg, rgba(0,212,160,0.06) 0%, rgba(0,212,160,0.02) 100%)",
-              border: "1px solid rgba(0,212,160,0.15)",
-              boxShadow: "inset 0 1px 0 rgba(0,212,160,0.06)",
+              background: "linear-gradient(135deg, rgba(2,201,120,0.06) 0%, rgba(2,201,120,0.02) 100%)",
+              border: "1px solid rgba(2,201,120,0.15)",
+              boxShadow: "inset 0 1px 0 rgba(2,201,120,0.06)",
             }}
             whileHover={{
-              boxShadow: "0 8px 40px rgba(0,212,160,0.12), inset 0 1px 0 rgba(0,212,160,0.1)",
+              boxShadow: "0 8px 40px rgba(2,201,120,0.12), inset 0 1px 0 rgba(2,201,120,0.1)",
               y: -3,
               transition: { duration: 0.3 },
             }}
@@ -160,13 +160,13 @@ export default function Services() {
               aria-hidden="true"
               className="absolute -bottom-8 -right-8 w-36 h-36 rounded-full pointer-events-none"
               style={{
-                background: "radial-gradient(circle, rgba(0,212,160,0.18) 0%, transparent 70%)",
+                background: "radial-gradient(circle, rgba(2,201,120,0.18) 0%, transparent 70%)",
                 filter: "blur(20px)",
               }}
             />
 
             <div>
-              <span className="font-mono text-[10px] text-[#00D4A0]/70 tracking-widest uppercase mb-4 block">
+              <span className="font-mono text-[10px] text-[#02c978]/70 tracking-widest uppercase mb-4 block">
                 Tu caso
               </span>
               <h3 className="text-base font-bold text-[#F0F0F0] leading-snug mb-3">
@@ -179,11 +179,11 @@ export default function Services() {
 
             <Link
               href="#contacto"
-              className="mt-6 inline-flex items-center gap-2 text-[#00D4A0] text-xs font-mono font-semibold group-hover:gap-3 transition-all duration-300"
+              className="mt-6 inline-flex items-center gap-2 text-[#02c978] text-xs font-mono font-semibold group-hover:gap-3 transition-all duration-300"
             >
               <span
                 className="w-4 h-px transition-all duration-300 group-hover:w-6"
-                style={{ background: "#00D4A0" }}
+                style={{ background: "#02c978" }}
               />
               Cuéntanos tu caso
             </Link>
@@ -196,7 +196,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="mt-14 p-8 rounded-2xl border border-[#00D4A0]/10 bg-[#00D4A0]/4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+          className="mt-14 p-8 rounded-2xl border border-[#02c978]/10 bg-[#02c978]/4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >
           <div>
             <p className="text-[#F0F0F0]/70 text-base leading-relaxed">
@@ -208,8 +208,8 @@ export default function Services() {
           </div>
           <Link
             href="#contacto"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200 flex items-center gap-2"
-            style={{ boxShadow: "0 0 20px rgba(0,212,160,0.2)" }}
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200 flex items-center gap-2"
+            style={{ boxShadow: "0 0 20px rgba(2,201,120,0.2)" }}
           >
             Cuéntanos tu caso →
           </Link>

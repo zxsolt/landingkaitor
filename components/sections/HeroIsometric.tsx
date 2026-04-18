@@ -21,7 +21,7 @@ const integrations = ["Excel", "Slack", "SAP", "Notion", "Gmail", "HubSpot", "Sh
 
 const CheckIcon = () => (
   <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-    <path d="M1 4l2 2 4-4" stroke="#00D4A0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M1 4l2 2 4-4" stroke="#02c978" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -54,7 +54,7 @@ export default function HeroIsometric() {
           width: 480, height: 480,
           top: "50%", left: "45%",
           transform: "translate(-50%, -50%)",
-          background: "radial-gradient(circle, rgba(0,212,160,0.10) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(2,201,120,0.10) 0%, transparent 70%)",
           filter: "blur(50px)",
         }}
       />
@@ -73,7 +73,7 @@ export default function HeroIsometric() {
           className="rounded-2xl p-5 border"
           style={{
             background: "rgba(8, 12, 18, 0.88)",
-            borderColor: "rgba(0,212,160,0.20)",
+            borderColor: "rgba(2,201,120,0.20)",
             backdropFilter: "blur(20px)",
             boxShadow: "0 0 0 1px rgba(255,255,255,0.04), 0 24px 64px rgba(0,0,0,0.55)",
           }}
@@ -83,10 +83,10 @@ export default function HeroIsometric() {
             <motion.div
               animate={{ opacity: [1, 0.4, 1] }}
               transition={{ repeat: Infinity, duration: 1.8 }}
-              className="w-1.5 h-1.5 rounded-full bg-[#00D4A0]"
-              style={{ boxShadow: "0 0 5px rgba(0,212,160,0.9)" }}
+              className="w-1.5 h-1.5 rounded-full bg-[#02c978]"
+              style={{ boxShadow: "0 0 5px rgba(2,201,120,0.9)" }}
             />
-            <span className="font-mono text-[10px] text-[#00D4A0]/75 tracking-widest uppercase">
+            <span className="font-mono text-[10px] text-[#02c978]/75 tracking-widest uppercase">
               Flujo en ejecución
             </span>
             <span className="ml-auto font-mono text-[9px] text-[#F0F0F0]/22">
@@ -104,17 +104,17 @@ export default function HeroIsometric() {
                     className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                     style={{
                       background: step.active
-                        ? "rgba(0,212,160,0.18)"
-                        : "rgba(0,212,160,0.08)",
-                      border: `1px solid rgba(0,212,160,${step.active ? 0.55 : 0.22})`,
-                      boxShadow: step.active ? "0 0 10px rgba(0,212,160,0.25)" : "none",
+                        ? "rgba(2,201,120,0.18)"
+                        : "rgba(2,201,120,0.08)",
+                      border: `1px solid rgba(2,201,120,${step.active ? 0.55 : 0.22})`,
+                      boxShadow: step.active ? "0 0 10px rgba(2,201,120,0.25)" : "none",
                     }}
                   >
                     {step.active ? (
                       <motion.div
                         animate={{ scale: [1, 1.3, 1] }}
                         transition={{ repeat: Infinity, duration: 1.4 }}
-                        className="w-1.5 h-1.5 rounded-full bg-[#00D4A0]"
+                        className="w-1.5 h-1.5 rounded-full bg-[#02c978]"
                       />
                     ) : (
                       <CheckIcon />
@@ -123,7 +123,7 @@ export default function HeroIsometric() {
                   {i < workflowSteps.length - 1 && (
                     <div
                       className="w-px flex-1 my-1"
-                      style={{ background: "rgba(0,212,160,0.12)", minHeight: 10 }}
+                      style={{ background: "rgba(2,201,120,0.12)", minHeight: 10 }}
                     />
                   )}
                 </div>
@@ -146,7 +146,7 @@ export default function HeroIsometric() {
             <span className="font-mono text-[9px] text-[#F0F0F0]/22">
               Sin intervención manual
             </span>
-            <span className="font-mono text-[9px] text-[#00D4A0]/55">
+            <span className="font-mono text-[9px] text-[#02c978]/55">
               847 ejecuciones hoy ↑
             </span>
           </div>
@@ -167,7 +167,7 @@ export default function HeroIsometric() {
           className="rounded-xl p-4 border"
           style={{
             background: "rgba(8, 12, 18, 0.90)",
-            borderColor: "rgba(0,212,160,0.18)",
+            borderColor: "rgba(2,201,120,0.18)",
             backdropFilter: "blur(20px)",
             boxShadow: "0 0 0 1px rgba(255,255,255,0.04), 0 16px 48px rgba(0,0,0,0.5)",
           }}
@@ -176,8 +176,8 @@ export default function HeroIsometric() {
             Horas liberadas
           </div>
           <div
-            className="text-[2.6rem] font-black leading-none text-[#00D4A0]"
-            style={{ textShadow: "0 0 24px rgba(0,212,160,0.45)" }}
+            className="text-[2.6rem] font-black leading-none text-[#02c978]"
+            style={{ textShadow: "0 0 24px rgba(2,201,120,0.45)" }}
           >
             28h
           </div>
@@ -196,8 +196,8 @@ export default function HeroIsometric() {
                 style={{
                   height: `${h * 100}%`,
                   background: i === 6
-                    ? "rgba(0,212,160,0.75)"
-                    : `rgba(0,212,160,${0.12 + h * 0.12})`,
+                    ? "rgba(2,201,120,0.75)"
+                    : `rgba(2,201,120,${0.12 + h * 0.12})`,
                   transformOrigin: "bottom",
                 }}
               />
@@ -229,7 +229,7 @@ export default function HeroIsometric() {
             <motion.div
               animate={{ opacity: [1, 0.3, 1] }}
               transition={{ repeat: Infinity, duration: 1.3 }}
-              className="w-1.5 h-1.5 rounded-full bg-[#00D4A0]"
+              className="w-1.5 h-1.5 rounded-full bg-[#02c978]"
             />
             <span className="font-mono text-[9px] text-[#F0F0F0]/32 tracking-widest uppercase">
               Actividad en vivo
@@ -246,7 +246,7 @@ export default function HeroIsometric() {
               >
                 <div
                   className="w-1 h-1 rounded-full mt-1.5 shrink-0"
-                  style={{ background: "rgba(0,212,160,0.45)" }}
+                  style={{ background: "rgba(2,201,120,0.45)" }}
                 />
                 <span
                   className="text-[10px] leading-tight flex-1"
@@ -305,9 +305,9 @@ export default function HeroIsometric() {
             <span
               className="px-2 py-0.5 rounded-md font-mono text-[9px]"
               style={{
-                background: "rgba(0,212,160,0.07)",
-                border: "1px solid rgba(0,212,160,0.15)",
-                color: "rgba(0,212,160,0.55)",
+                background: "rgba(2,201,120,0.07)",
+                border: "1px solid rgba(2,201,120,0.15)",
+                color: "rgba(2,201,120,0.55)",
               }}
             >
               + más

@@ -67,7 +67,7 @@ export default function WorkingWithUs() {
         aria-hidden="true"
         className="absolute top-0 left-0 right-0 h-px"
         style={{
-          background: "linear-gradient(to right, transparent, rgba(0,212,160,0.1), transparent)",
+          background: "linear-gradient(to right, transparent, rgba(2,201,120,0.1), transparent)",
         }}
       />
 
@@ -101,14 +101,14 @@ export default function WorkingWithUs() {
           {moments.map((m, i) => (
             <motion.div key={i} variants={item}>
               <SpotlightCard
-                className="group relative rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#00D4A0]/15 transition-colors duration-300"
+                className="group relative rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#02c978]/15 transition-colors duration-300"
                 style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)" }}
               >
                 <div className="p-7">
                   {/* When label + icon */}
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="text-[#00D4A0]/70 shrink-0">{m.icon}</div>
-                    <span className="font-mono text-[10px] text-[#00D4A0]/50 tracking-widest uppercase">
+                    <div className="text-[#02c978]/70 shrink-0">{m.icon}</div>
+                    <span className="font-mono text-[10px] text-[#02c978]/50 tracking-widest uppercase">
                       {m.when}
                     </span>
                   </div>
@@ -122,7 +122,7 @@ export default function WorkingWithUs() {
                   <div
                     className="absolute bottom-0 right-0 w-24 h-24 rounded-tl-2xl rounded-br-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
                     style={{
-                      background: "radial-gradient(circle at bottom right, rgba(0,212,160,0.06) 0%, transparent 70%)",
+                      background: "radial-gradient(circle at bottom right, rgba(2,201,120,0.06) 0%, transparent 70%)",
                     }}
                   />
                 </div>

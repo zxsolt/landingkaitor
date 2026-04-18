@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SpotlightCard from "@/components/ui/SpotlightCard";
@@ -10,6 +11,7 @@ const services = [
   {
     number: "01",
     label: "Automatización",
+    image: "/service-automatizacion.png",
     problem: "Tu equipo hace a mano lo que debería hacer un sistema",
     body: "Notificaciones, hojas de cálculo, datos copiados entre herramientas. Cada hora que eso consume es dinero que no vuelve.",
     icon: (
@@ -25,6 +27,7 @@ const services = [
   {
     number: "02",
     label: "Integración / APIs",
+    image: "/service-integraciones.png",
     problem: "Tus herramientas no se hablan entre sí",
     body: "CRM desconectado de contabilidad, web sin sincronizar con almacén. Cada sistema es una isla. Conectarlos no es complicado — solo hay que hacerlo.",
     icon: (
@@ -39,6 +42,7 @@ const services = [
   {
     number: "03",
     label: "Software a medida",
+    image: "/service-software.png",
     problem: "No tienes visibilidad real de lo que pasa en tu negocio",
     body: "Decisiones con datos de hace tres días, informes a mano. Construimos dashboards y herramientas que te dan la imagen completa, en tiempo real.",
     icon: (
@@ -66,6 +70,7 @@ const services = [
   {
     number: "05",
     label: "IA aplicada",
+    image: "/service-ia.png",
     problem: "Necesitas una herramienta que no existe en el mercado",
     body: "Clasificación automática, extracción de datos, asistentes internos, predicción. Lo construimos desde cero, para tu operativa concreta.",
     icon: (
@@ -112,17 +117,36 @@ function ServiceCard({ s, i, wide }: { s: typeof services[0]; i: number; wide?: 
       className="h-full"
     >
       <SpotlightCard
-        className="h-full rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#00D4A0]/18 transition-colors duration-300 flex flex-col"
+        className="h-full rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#02c978]/18 transition-colors duration-300 flex flex-col overflow-hidden"
         style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)" }}
       >
+        {/* Illustration */}
+        {s.image && (
+          <div className="relative w-full overflow-hidden" style={{ height: 180 }}>
+            <Image
+              src={s.image}
+              alt={s.label}
+              fill
+              className="object-cover object-top"
+              style={{ opacity: 0.88 }}
+              unoptimized
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to bottom, transparent 50%, #0E1318 100%)",
+              }}
+            />
+          </div>
+        )}
         <div className={`p-6 flex ${wide ? "flex-row gap-8 items-start" : "flex-col"} flex-1`}>
           {/* Content */}
           <div className="flex flex-col flex-1">
-            <div className="flex items-start justify-between mb-5">
-              <div className="text-[#00D4A0] opacity-70">{s.icon}</div>
+            <div className="flex items-start justify-between mb-3">
+              <div className="text-[#02c978] opacity-70">{s.icon}</div>
               <span className="font-mono text-[10px] text-[#F0F0F0]/15 tracking-widest">{s.number}</span>
             </div>
-            <span className="font-mono text-[10px] text-[#00D4A0]/60 tracking-widest uppercase block mb-2">
+            <span className="font-mono text-[10px] text-[#02c978]/60 tracking-widest uppercase block mb-2">
               {s.label}
             </span>
             <h3 className="text-[#F0F0F0] font-bold text-base leading-snug mb-3">{s.problem}</h3>
@@ -131,7 +155,7 @@ function ServiceCard({ s, i, wide }: { s: typeof services[0]; i: number; wide?: 
         </div>
         <div
           className="h-px mx-6 mb-6 rounded-full"
-          style={{ background: "linear-gradient(to right, rgba(0,212,160,0.2), transparent)" }}
+          style={{ background: "linear-gradient(to right, rgba(2,201,120,0.2), transparent)" }}
         />
       </SpotlightCard>
     </motion.div>
@@ -145,7 +169,7 @@ export default function ServicesV1() {
         aria-hidden="true"
         className="absolute right-0 top-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(0,212,160,0.05) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(2,201,120,0.05) 0%, transparent 70%)",
           filter: "blur(80px)",
           transform: "translateY(-50%)",
         }}
@@ -206,8 +230,8 @@ export default function ServicesV1() {
           </div>
           <Link
             href="#contacto"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200 flex items-center gap-2"
-            style={{ boxShadow: "0 0 24px rgba(0,212,160,0.25)" }}
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200 flex items-center gap-2"
+            style={{ boxShadow: "0 0 24px rgba(2,201,120,0.25)" }}
           >
             Cuéntanos tu caso →
           </Link>

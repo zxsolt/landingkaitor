@@ -18,7 +18,7 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 50% 100%, rgba(0,212,160,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at 50% 100%, rgba(2,201,120,0.06) 0%, transparent 70%)",
           filter: "blur(40px)",
         }}
       />
@@ -52,7 +52,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-mono text-xs text-[#F0F0F0]/35 hover:text-[#00D4A0] tracking-wide transition-colors duration-200"
+                className="font-mono text-xs text-[#F0F0F0]/35 hover:text-[#02c978] tracking-wide transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
           {/* Email CTA */}
           <a
             href="mailto:hola@kaitor.com"
-            className="font-mono text-xs text-[#F0F0F0]/40 hover:text-[#00D4A0] transition-colors duration-200 tracking-wide"
+            className="font-mono text-xs text-[#F0F0F0]/40 hover:text-[#02c978] transition-colors duration-200 tracking-wide"
           >
             hola@kaitor.com
           </a>
@@ -97,8 +97,8 @@ export default function Footer() {
 
           <div className="flex items-center gap-1 font-mono text-[10px] text-[#F0F0F0]/15 tracking-widest">
             <span
-              className="w-1.5 h-1.5 rounded-full bg-[#00D4A0] inline-block"
-              style={{ boxShadow: "0 0 6px rgba(0,212,160,0.6)" }}
+              className="w-1.5 h-1.5 rounded-full bg-[#02c978] inline-block"
+              style={{ boxShadow: "0 0 6px rgba(2,201,120,0.6)" }}
             />
             &nbsp;España · B2B y B2C · Software a medida
           </div>

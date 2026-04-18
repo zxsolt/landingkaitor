@@ -59,7 +59,7 @@ export default function ServicesV3() {
         aria-hidden="true"
         className="absolute right-1/4 top-1/3 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(0,212,160,0.07) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(2,201,120,0.07) 0%, transparent 65%)",
           filter: "blur(100px)",
         }}
       />
@@ -110,15 +110,15 @@ export default function ServicesV3() {
                   onClick={() => setActive(i)}
                   className="group relative flex items-center gap-4 px-5 py-4 rounded-xl text-left transition-all duration-250 cursor-pointer"
                   style={{
-                    background: isActive ? "rgba(0,212,160,0.06)" : "transparent",
-                    border: isActive ? "1px solid rgba(0,212,160,0.18)" : "1px solid transparent",
+                    background: isActive ? "rgba(2,201,120,0.06)" : "transparent",
+                    border: isActive ? "1px solid rgba(2,201,120,0.18)" : "1px solid transparent",
                   }}
                 >
                   {/* Active left bar */}
                   <motion.div
                     className="absolute left-0 top-3 bottom-3 w-0.5 rounded-full"
                     animate={{
-                      background: isActive ? "#00D4A0" : "transparent",
+                      background: isActive ? "#02c978" : "transparent",
                       opacity: isActive ? 1 : 0,
                     }}
                     transition={{ duration: 0.2 }}
@@ -127,7 +127,7 @@ export default function ServicesV3() {
                   {/* Number */}
                   <span
                     className="font-mono text-xs tabular-nums shrink-0 transition-colors duration-200"
-                    style={{ color: isActive ? "#00D4A0" : "rgba(240,240,240,0.2)" }}
+                    style={{ color: isActive ? "#02c978" : "rgba(240,240,240,0.2)" }}
                   >
                     {sv.number}
                   </span>
@@ -136,7 +136,7 @@ export default function ServicesV3() {
                   <div className="flex-1 min-w-0">
                     <span
                       className="font-mono text-[10px] tracking-widest uppercase block transition-colors duration-200"
-                      style={{ color: isActive ? "rgba(0,212,160,0.6)" : "rgba(240,240,240,0.25)" }}
+                      style={{ color: isActive ? "rgba(2,201,120,0.6)" : "rgba(240,240,240,0.25)" }}
                     >
                       {sv.label}
                     </span>
@@ -149,8 +149,8 @@ export default function ServicesV3() {
                       x: isActive ? 0 : 8,
                     }}
                     transition={{ duration: 0.2 }}
-                    className="shrink-0 text-[9px] font-mono text-[#00D4A0]/70 px-2 py-0.5 rounded-full"
-                    style={{ border: "1px solid rgba(0,212,160,0.2)", background: "rgba(0,212,160,0.04)" }}
+                    className="shrink-0 text-[9px] font-mono text-[#02c978]/70 px-2 py-0.5 rounded-full"
+                    style={{ border: "1px solid rgba(2,201,120,0.2)", background: "rgba(2,201,120,0.04)" }}
                   >
                     {sv.tag}
                   </motion.span>
@@ -161,14 +161,14 @@ export default function ServicesV3() {
             {/* Custom case link */}
             <div
               className="mt-2 px-5 py-4 rounded-xl"
-              style={{ border: "1px dashed rgba(0,212,160,0.15)" }}
+              style={{ border: "1px dashed rgba(2,201,120,0.15)" }}
             >
-              <span className="font-mono text-[10px] text-[#00D4A0]/40 tracking-widest uppercase block mb-1">
+              <span className="font-mono text-[10px] text-[#02c978]/40 tracking-widest uppercase block mb-1">
                 Tu caso
               </span>
               <Link
                 href="#contacto"
-                className="text-xs text-[#F0F0F0]/40 hover:text-[#00D4A0] transition-colors duration-200 leading-relaxed"
+                className="text-xs text-[#F0F0F0]/40 hover:text-[#02c978] transition-colors duration-200 leading-relaxed"
               >
                 ¿No ves tu problema aquí? Cuéntanoslo →
               </Link>
@@ -190,7 +190,7 @@ export default function ServicesV3() {
               aria-hidden="true"
               className="absolute top-0 right-0 w-96 h-96 pointer-events-none"
               style={{
-                background: "radial-gradient(circle at top right, rgba(0,212,160,0.08) 0%, transparent 60%)",
+                background: "radial-gradient(circle at top right, rgba(2,201,120,0.08) 0%, transparent 60%)",
               }}
             />
 
@@ -206,8 +206,8 @@ export default function ServicesV3() {
                 {/* Top meta */}
                 <div className="flex items-center gap-3 mb-8">
                   <span
-                    className="font-mono text-[10px] text-[#00D4A0]/60 tracking-widest uppercase px-3 py-1 rounded-full"
-                    style={{ border: "1px solid rgba(0,212,160,0.2)", background: "rgba(0,212,160,0.05)" }}
+                    className="font-mono text-[10px] text-[#02c978]/60 tracking-widest uppercase px-3 py-1 rounded-full"
+                    style={{ border: "1px solid rgba(2,201,120,0.2)", background: "rgba(2,201,120,0.05)" }}
                   >
                     {s.label}
                   </span>
@@ -224,7 +224,7 @@ export default function ServicesV3() {
                 {/* Divider */}
                 <div
                   className="w-12 h-px mb-6"
-                  style={{ background: "rgba(0,212,160,0.4)" }}
+                  style={{ background: "rgba(2,201,120,0.4)" }}
                 />
 
                 {/* Body */}
@@ -236,8 +236,8 @@ export default function ServicesV3() {
                 <div className="mt-10 flex items-center justify-between flex-wrap gap-4">
                   <Link
                     href="#contacto"
-                    className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200"
-                    style={{ boxShadow: "0 0 20px rgba(0,212,160,0.2)" }}
+                    className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200"
+                    style={{ boxShadow: "0 0 20px rgba(2,201,120,0.2)" }}
                   >
                     {s.cta} →
                   </Link>
@@ -252,7 +252,7 @@ export default function ServicesV3() {
                         style={{
                           width: active === i ? "20px" : "6px",
                           height: "6px",
-                          background: active === i ? "#00D4A0" : "rgba(240,240,240,0.15)",
+                          background: active === i ? "#02c978" : "rgba(240,240,240,0.15)",
                         }}
                         aria-label={`Ver servicio ${i + 1}`}
                       />
@@ -270,7 +270,7 @@ export default function ServicesV3() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-12 p-8 rounded-2xl border border-[#00D4A0]/10 bg-[#00D4A0]/3 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+          className="mt-12 p-8 rounded-2xl border border-[#02c978]/10 bg-[#02c978]/3 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >
           <div>
             <p className="text-[#F0F0F0]/70 text-base leading-relaxed">
@@ -282,8 +282,8 @@ export default function ServicesV3() {
           </div>
           <Link
             href="#contacto"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200 flex items-center gap-2"
-            style={{ boxShadow: "0 0 20px rgba(0,212,160,0.2)" }}
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200 flex items-center gap-2"
+            style={{ boxShadow: "0 0 20px rgba(2,201,120,0.2)" }}
           >
             Cuéntanos tu caso →
           </Link>

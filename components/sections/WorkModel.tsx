@@ -9,12 +9,12 @@ const phases = [
   {
     number: "01",
     badge: "100% gratuito · Sin compromiso",
-    badgeColor: "text-[#00D4A0]/60",
+    badgeColor: "text-[#02c978]/60",
     title: "Diagnóstico o auditoría",
     body: "Una conversación directa para entender qué está fallando y si podemos resolverlo. Sin formularios largos, sin presentaciones. Solo cuéntanos el problema.",
     highlight: "0€",
     highlightLabel: "siempre",
-    borderClass: "border-[#00D4A0]/20",
+    borderClass: "border-[#02c978]/20",
     bgClass: "bg-[#0E1318]",
   },
   {
@@ -74,7 +74,7 @@ function PhaseCard({ phase, i }: { phase: (typeof phases)[0]; i: number }) {
       className="h-full"
     >
       <SpotlightCard
-        className={`h-full rounded-2xl border ${phase.borderClass} ${phase.bgClass} hover:border-[#00D4A0]/25 transition-colors duration-300 flex flex-col`}
+        className={`h-full rounded-2xl border ${phase.borderClass} ${phase.bgClass} hover:border-[#02c978]/25 transition-colors duration-300 flex flex-col`}
         style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)" }}
       >
         <div className="p-7 flex flex-col flex-1">
@@ -82,7 +82,7 @@ function PhaseCard({ phase, i }: { phase: (typeof phases)[0]; i: number }) {
           <div className="flex items-start justify-between mb-5">
             <span
               className="font-mono text-3xl font-bold leading-none"
-              style={{ color: "rgba(0,212,160,0.15)", letterSpacing: "-0.02em" }}
+              style={{ color: "rgba(2,201,120,0.15)", letterSpacing: "-0.02em" }}
             >
               {phase.number}
             </span>
@@ -120,7 +120,7 @@ function PhaseCard({ phase, i }: { phase: (typeof phases)[0]; i: number }) {
           {/* Bottom line */}
           <div
             className="mt-6 h-px w-0 group-hover:w-full transition-all duration-500"
-            style={{ background: "linear-gradient(to right, rgba(0,212,160,0.3), transparent)" }}
+            style={{ background: "linear-gradient(to right, rgba(2,201,120,0.3), transparent)" }}
           />
         </div>
       </SpotlightCard>
@@ -136,7 +136,7 @@ export default function WorkModel() {
         aria-hidden="true"
         className="absolute bottom-0 left-0 w-[600px] h-[400px] pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 0% 100%, rgba(0,212,160,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at 0% 100%, rgba(2,201,120,0.07) 0%, transparent 70%)",
           filter: "blur(60px)",
         }}
       />

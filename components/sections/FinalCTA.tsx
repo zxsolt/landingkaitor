@@ -8,7 +8,7 @@ const guarantees = [
   {
     icon: (
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M2 7l3.5 3.5L12 3" stroke="#00D4A0" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M2 7l3.5 3.5L12 3" stroke="#02c978" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     text: "Respuesta en menos de 24 horas",
@@ -16,7 +16,7 @@ const guarantees = [
   {
     icon: (
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M2 7l3.5 3.5L12 3" stroke="#00D4A0" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M2 7l3.5 3.5L12 3" stroke="#02c978" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     text: "Sin jerga técnica — hablamos de tu negocio",
@@ -24,7 +24,7 @@ const guarantees = [
   {
     icon: (
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M2 7l3.5 3.5L12 3" stroke="#00D4A0" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M2 7l3.5 3.5L12 3" stroke="#02c978" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     text: "Si no podemos ayudarte, te lo decimos",
@@ -32,7 +32,7 @@ const guarantees = [
   {
     icon: (
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M2 7l3.5 3.5L12 3" stroke="#00D4A0" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M2 7l3.5 3.5L12 3" stroke="#02c978" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     text: "Precio cerrado antes de empezar a trabajar",
@@ -50,8 +50,8 @@ export default function FinalCTA() {
 
   const inputStyle = (field: string) => ({
     background: "rgba(6,8,11,0.8)",
-    borderColor: focused === field ? "rgba(0,212,160,0.4)" : "rgba(255,255,255,0.07)",
-    boxShadow: focused === field ? "0 0 0 3px rgba(0,212,160,0.07)" : "none",
+    borderColor: focused === field ? "rgba(2,201,120,0.4)" : "rgba(255,255,255,0.07)",
+    boxShadow: focused === field ? "0 0 0 3px rgba(2,201,120,0.07)" : "none",
   });
 
   return (
@@ -67,7 +67,7 @@ export default function FinalCTA() {
           width: 900,
           height: 700,
           background:
-            "radial-gradient(circle, rgba(0,212,160,0.18) 0%, rgba(0,212,160,0.06) 45%, transparent 68%)",
+            "radial-gradient(circle, rgba(2,201,120,0.18) 0%, rgba(2,201,120,0.06) 45%, transparent 68%)",
           filter: "blur(80px)",
         }}
       />
@@ -86,7 +86,7 @@ export default function FinalCTA() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(0,212,160,0.18), transparent)",
+            "linear-gradient(to right, transparent, rgba(2,201,120,0.18), transparent)",
         }}
       />
 
@@ -109,8 +109,8 @@ export default function FinalCTA() {
               entender tu negocio.
               <br />
               <span
-                className="text-[#00D4A0]"
-                style={{ textShadow: "0 0 50px rgba(0,212,160,0.3)" }}
+                className="text-[#02c978]"
+                style={{ textShadow: "0 0 50px rgba(2,201,120,0.3)" }}
               >
                 Sin coste. Sin trampa.
               </span>
@@ -136,8 +136,8 @@ export default function FinalCTA() {
                   <div
                     className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                     style={{
-                      background: "rgba(0,212,160,0.1)",
-                      border: "1px solid rgba(0,212,160,0.2)",
+                      background: "rgba(2,201,120,0.1)",
+                      border: "1px solid rgba(2,201,120,0.2)",
                     }}
                   >
                     {g.icon}
@@ -156,7 +156,7 @@ export default function FinalCTA() {
               </p>
               <a
                 href="mailto:hola@kaitor.com"
-                className="font-mono text-sm text-[#00D4A0]/60 hover:text-[#00D4A0] transition-colors duration-200 flex items-center gap-2"
+                className="font-mono text-sm text-[#02c978]/60 hover:text-[#02c978] transition-colors duration-200 flex items-center gap-2"
               >
                 hola@kaitor.com
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -178,14 +178,14 @@ export default function FinalCTA() {
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="p-10 rounded-2xl border border-[#00D4A0]/20 bg-[#00D4A0]/4 text-center"
+                className="p-10 rounded-2xl border border-[#02c978]/20 bg-[#02c978]/4 text-center"
               >
                 <div
-                  className="w-12 h-12 rounded-full border-2 border-[#00D4A0] flex items-center justify-center mx-auto mb-5"
-                  style={{ boxShadow: "0 0 28px rgba(0,212,160,0.25)" }}
+                  className="w-12 h-12 rounded-full border-2 border-[#02c978] flex items-center justify-center mx-auto mb-5"
+                  style={{ boxShadow: "0 0 28px rgba(2,201,120,0.25)" }}
                 >
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M4 10l5 5 7-9" stroke="#00D4A0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M4 10l5 5 7-9" stroke="#02c978" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#F0F0F0] mb-2">
@@ -278,8 +278,8 @@ export default function FinalCTA() {
 
                 <button
                   type="submit"
-                  className="group w-full relative py-3.5 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-2 overflow-hidden"
-                  style={{ boxShadow: "0 0 28px rgba(0,212,160,0.28)" }}
+                  className="group w-full relative py-3.5 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-2 overflow-hidden"
+                  style={{ boxShadow: "0 0 28px rgba(2,201,120,0.28)" }}
                 >
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none" />
                   Solicitar diagnóstico gratuito

@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { label: "Cómo trabajamos", href: "#como-trabajamos", id: "como-trabajamos" },
   { label: "Servicios", href: "#servicios", id: "servicios" },
-  { label: "Por qué Kaitor", href: "#por-que-kaitor", id: "por-que-kaitor" },
   { label: "FAQ", href: "#faq", id: "faq" },
   { label: "Contacto", href: "#contacto", id: "contacto" },
 ];
@@ -58,15 +57,15 @@ export default function Navbar() {
         className="absolute top-0 left-0 right-0 h-[2px] origin-left z-50 pointer-events-none"
         style={{
           scaleX,
-          background: "linear-gradient(to right, #00D4A0, #00ffbe)",
-          boxShadow: "0 0 8px rgba(0,212,160,0.6)",
+          background: "linear-gradient(to right, #02c978, #04f5a8)",
+          boxShadow: "0 0 8px rgba(2,201,120,0.6)",
         }}
       />
 
       <div
         className={`transition-all duration-500 ${
           scrolled
-            ? "border-b border-white/5 bg-[#06080B]/85 backdrop-blur-2xl"
+            ? "border-b border-white/5 bg-[#080b0a]/85 backdrop-blur-2xl"
             : "bg-transparent"
         }`}
       >
@@ -93,14 +92,14 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className="relative font-mono text-xs tracking-wide transition-colors duration-200"
-                  style={{ color: isActive ? "#00D4A0" : "rgba(240,240,240,0.5)" }}
+                  style={{ color: isActive ? "#02c978" : "rgba(240,240,240,0.5)" }}
                 >
                   {link.label}
                   {isActive && (
                     <motion.span
                       layoutId="nav-indicator"
                       className="absolute -bottom-1 left-0 right-0 h-px rounded-full"
-                      style={{ background: "#00D4A0", boxShadow: "0 0 6px rgba(0,212,160,0.8)" }}
+                      style={{ background: "#02c978", boxShadow: "0 0 6px rgba(2,201,120,0.8)" }}
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
@@ -112,8 +111,8 @@ export default function Navbar() {
           {/* CTA */}
           <Link
             href="#contacto"
-            className="hidden md:flex items-center gap-1.5 bg-[#00D4A0] text-[#06080B] text-xs font-bold px-4 py-2 rounded-lg hover:bg-[#00A87E] transition-all duration-200 tracking-wide hover:scale-105"
-            style={{ boxShadow: "0 0 16px rgba(0,212,160,0.25)" }}
+            className="hidden md:flex items-center gap-1.5 bg-[#02c978] text-[#080b0a] text-xs font-bold px-4 py-2 rounded-lg hover:bg-[#01a060] transition-all duration-200 tracking-wide hover:scale-105"
+            style={{ boxShadow: "0 0 16px rgba(2,201,120,0.25)" }}
           >
             Diagnóstico gratuito
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -140,14 +139,14 @@ export default function Navbar() {
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="md:hidden overflow-hidden border-t border-white/5"
         >
-          <div className="px-6 py-6 flex flex-col gap-4 bg-[#06080B]/95 backdrop-blur-xl">
+          <div className="px-6 py-6 flex flex-col gap-4 bg-[#080b0a]/95 backdrop-blur-xl">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className="font-mono text-sm transition-colors"
-                style={{ color: activeSection === link.id ? "#00D4A0" : "rgba(240,240,240,0.6)" }}
+                style={{ color: activeSection === link.id ? "#02c978" : "rgba(240,240,240,0.6)" }}
               >
                 {link.label}
               </Link>
@@ -155,7 +154,7 @@ export default function Navbar() {
             <Link
               href="#contacto"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 flex items-center justify-center gap-2 bg-[#00D4A0] text-[#06080B] text-sm font-bold px-4 py-3 rounded-lg"
+              className="mt-2 flex items-center justify-center gap-2 bg-[#02c978] text-[#080b0a] text-sm font-bold px-4 py-3 rounded-lg"
             >
               Diagnóstico gratuito →
             </Link>

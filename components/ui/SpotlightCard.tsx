@@ -17,7 +17,7 @@ export default function SpotlightCard({
   className = "",
   style,
   radius = 320,
-  color = "rgba(0,212,160,0.09)",
+  color = "rgba(2,201,120,0.09)",
   as: Tag = "div",
   onClick,
 }: SpotlightCardProps) {

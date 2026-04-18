@@ -71,9 +71,9 @@ function Idea1NodeNetwork() {
 
     function drawGlow(x: number, y: number, r: number, alpha: number) {
       const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-      g.addColorStop(0, `rgba(0,212,160,${alpha})`);
-      g.addColorStop(0.4, `rgba(0,212,160,${alpha * 0.4})`);
-      g.addColorStop(1, "rgba(0,212,160,0)");
+      g.addColorStop(0, `rgba(2,201,120,${alpha})`);
+      g.addColorStop(0.4, `rgba(2,201,120,${alpha * 0.4})`);
+      g.addColorStop(1, "rgba(2,201,120,0)");
       ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = g; ctx.fill();
     }
@@ -119,14 +119,14 @@ function Idea1NodeNetwork() {
           // Shadow/glow detrás de la línea
           ctx.beginPath();
           ctx.moveTo(ni.x, ni.y); ctx.lineTo(nj.x, nj.y);
-          ctx.strokeStyle = `rgba(0,212,160,${alpha * 0.4})`;
+          ctx.strokeStyle = `rgba(2,201,120,${alpha * 0.4})`;
           ctx.lineWidth = 3.5;
           ctx.stroke();
 
           // Línea principal
           ctx.beginPath();
           ctx.moveTo(ni.x, ni.y); ctx.lineTo(nj.x, nj.y);
-          ctx.strokeStyle = `rgba(0,212,160,${alpha})`;
+          ctx.strokeStyle = `rgba(2,201,120,${alpha})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -154,7 +154,7 @@ function Idea1NodeNetwork() {
             a.x + (b.x - a.x) * Math.max(0, p.t - (seg - 1) * 0.055),
             a.y + (b.y - a.y) * Math.max(0, p.t - (seg - 1) * 0.055)
           );
-          ctx.strokeStyle = `rgba(0,212,160,${p.brightness * (0.5 - seg * 0.12)})`;
+          ctx.strokeStyle = `rgba(2,201,120,${p.brightness * (0.5 - seg * 0.12)})`;
           ctx.lineWidth = 2.5 - seg * 0.5;
           ctx.stroke();
         }
@@ -162,7 +162,7 @@ function Idea1NodeNetwork() {
         // Punto brillante
         drawGlow(x, y, 10, p.brightness * 0.35);
         ctx.beginPath(); ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,212,160,${p.brightness})`; ctx.fill();
+        ctx.fillStyle = `rgba(2,201,120,${p.brightness})`; ctx.fill();
       }
 
       // ── Nodos ────────────────────────────────────────────────────────────────
@@ -174,7 +174,7 @@ function Idea1NodeNetwork() {
           const ringR = pr + n.pulseRing * 40;
           const ringAlpha = (1 - n.pulseRing) * 0.6;
           ctx.beginPath(); ctx.arc(n.x, n.y, ringR, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(0,212,160,${ringAlpha})`;
+          ctx.strokeStyle = `rgba(2,201,120,${ringAlpha})`;
           ctx.lineWidth = 1.5; ctx.stroke();
         }
 
@@ -183,7 +183,7 @@ function Idea1NodeNetwork() {
 
         // Anillo exterior (segundo)
         ctx.beginPath(); ctx.arc(n.x, n.y, pr + 4, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(0,212,160,${0.12 * n.importance})`;
+        ctx.strokeStyle = `rgba(2,201,120,${0.12 * n.importance})`;
         ctx.lineWidth = 1; ctx.stroke();
 
         // Círculo principal
@@ -192,13 +192,13 @@ function Idea1NodeNetwork() {
         nodeGrad.addColorStop(0, "rgba(20,38,32,1)");
         nodeGrad.addColorStop(1, "rgba(6,8,11,1)");
         ctx.fillStyle = nodeGrad;
-        ctx.strokeStyle = `rgba(0,212,160,${0.7 + Math.sin(n.phase) * 0.2})`;
+        ctx.strokeStyle = `rgba(2,201,120,${0.7 + Math.sin(n.phase) * 0.2})`;
         ctx.lineWidth = 1.8;
         ctx.fill(); ctx.stroke();
 
         // Punto interior
         ctx.beginPath(); ctx.arc(n.x, n.y, pr * 0.28, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,212,160,${0.6 + Math.sin(n.phase) * 0.2})`; ctx.fill();
+        ctx.fillStyle = `rgba(2,201,120,${0.6 + Math.sin(n.phase) * 0.2})`; ctx.fill();
 
         // Label
         ctx.font = `${10 + n.r * 0.3}px monospace`;
@@ -272,7 +272,7 @@ function Idea2ParticleFlow() {
         ctx.beginPath();
         ctx.moveTo(p[0] * w, p[1] * h);
         ctx.bezierCurveTo(p[2]*w, p[3]*h, p[4]*w, p[5]*h, p[6]*w, p[7]*h);
-        ctx.strokeStyle = "rgba(0,212,160,.035)";
+        ctx.strokeStyle = "rgba(2,201,120,.035)";
         ctx.lineWidth = 1; ctx.stroke();
       }
 
@@ -286,9 +286,9 @@ function Idea2ParticleFlow() {
         const d = Math.hypot(dx, dy);
         if (d < 90 && d > 1) { const f = (90 - d) / 90 * 18; px += dx/d*f; py += dy/d*f; }
         ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(px, py);
-        ctx.strokeStyle = `rgba(0,212,160,${p.op * 0.38})`; ctx.lineWidth = p.sz * 0.7; ctx.stroke();
+        ctx.strokeStyle = `rgba(2,201,120,${p.op * 0.38})`; ctx.lineWidth = p.sz * 0.7; ctx.stroke();
         ctx.beginPath(); ctx.arc(px, py, p.sz, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,212,160,${p.op})`; ctx.fill();
+        ctx.fillStyle = `rgba(2,201,120,${p.op})`; ctx.fill();
       }
 
       // Vignette
@@ -391,7 +391,7 @@ function Idea3GridTransform() {
 
       if (mx > 0 && mx < w) {
         ctx.beginPath(); ctx.arc(mx, my, 90, 0, Math.PI * 2);
-        ctx.strokeStyle = "rgba(0,212,160,.06)"; ctx.lineWidth = 1; ctx.stroke();
+        ctx.strokeStyle = "rgba(2,201,120,.06)"; ctx.lineWidth = 1; ctx.stroke();
       }
 
       rafId = requestAnimationFrame(draw);
@@ -453,7 +453,7 @@ function Idea4CodeSpiral() {
       const { x: mx, y: my } = mouseRef.current;
 
       const cg = ctx.createRadialGradient(cx, cy, 0, cx, cy, 70);
-      cg.addColorStop(0, "rgba(0,212,160,.15)"); cg.addColorStop(1, "rgba(0,212,160,0)");
+      cg.addColorStop(0, "rgba(2,201,120,.15)"); cg.addColorStop(1, "rgba(2,201,120,0)");
       ctx.beginPath(); ctx.arc(cx, cy, 70, 0, Math.PI * 2); ctx.fillStyle = cg; ctx.fill();
 
       for (const f of frags) {
@@ -474,7 +474,7 @@ function Idea4CodeSpiral() {
         const alpha = Math.min(0.75, (f.radius / 180) * 0.7 + 0.1);
         ctx.font = `${f.fontSize}px monospace`;
         ctx.textAlign = "center";
-        ctx.fillStyle = `rgba(0,212,160,${alpha})`;
+        ctx.fillStyle = `rgba(2,201,120,${alpha})`;
         ctx.fillText(f.text, x, y);
       }
 
@@ -554,12 +554,12 @@ function Idea5ProcessMap() {
           return (
             <g key={i}>
               <path d={d} fill="none"
-                stroke={active ? "rgba(0,212,160,.4)" : "rgba(255,255,255,.06)"}
+                stroke={active ? "rgba(2,201,120,.4)" : "rgba(255,255,255,.06)"}
                 strokeWidth={active ? 1.5 : 1}
                 style={{ transition: "all .25s" }}
               />
               <path d={d} fill="none"
-                stroke="rgba(0,212,160,.75)"
+                stroke="rgba(2,201,120,.75)"
                 strokeWidth="1.5"
                 strokeDasharray="5 19"
                 filter="url(#svg-glow)"
@@ -583,20 +583,20 @@ function Idea5ProcessMap() {
             >
               {active && (
                 <circle cx={n.x} cy={n.y} r="24"
-                  fill="rgba(0,212,160,.07)"
-                  stroke="rgba(0,212,160,.2)"
+                  fill="rgba(2,201,120,.07)"
+                  stroke="rgba(2,201,120,.2)"
                   strokeWidth="1"
                 />
               )}
               <circle cx={n.x} cy={n.y} r="12"
                 fill="#080c12"
-                stroke={active ? "rgba(0,212,160,.95)" : "rgba(0,212,160,.32)"}
+                stroke={active ? "rgba(2,201,120,.95)" : "rgba(2,201,120,.32)"}
                 strokeWidth={active ? 1.5 : 1}
                 filter={active ? "url(#svg-glow)" : undefined}
                 style={{ transition: "all .2s" }}
               />
               <circle cx={n.x} cy={n.y} r="3.5"
-                fill={active ? "rgba(0,212,160,1)" : "rgba(0,212,160,.45)"}
+                fill={active ? "rgba(2,201,120,1)" : "rgba(2,201,120,.45)"}
                 style={{ transition: "fill .2s" }}
               />
               <text x={n.x} y={n.y + 28} textAnchor="middle"

@@ -51,7 +51,7 @@ function Stars() {
   return (
     <div className="flex items-center gap-0.5">
       {[...Array(5)].map((_, i) => (
-        <svg key={i} width="11" height="11" viewBox="0 0 12 12" fill="#00D4A0" style={{ filter: "drop-shadow(0 0 3px rgba(0,212,160,0.6))" }}>
+        <svg key={i} width="11" height="11" viewBox="0 0 12 12" fill="#02c978" style={{ filter: "drop-shadow(0 0 3px rgba(2,201,120,0.6))" }}>
           <path d="M6 1l1.5 3 3.3.5-2.4 2.3.6 3.2L6 8.5 3 10.5l.6-3.2L1.2 5 4.5 4.5z" />
         </svg>
       ))}
@@ -90,7 +90,7 @@ function TestimonialCard({ t, i }: { t: (typeof testimonials)[0]; i: number }) {
       className="h-full"
     >
       <SpotlightCard
-        className="h-full rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#00D4A0]/15 transition-colors duration-300 flex flex-col"
+        className="h-full rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#02c978]/15 transition-colors duration-300 flex flex-col"
         style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.025)" }}
       >
         <div className="p-7 flex flex-col flex-1">
@@ -100,9 +100,9 @@ function TestimonialCard({ t, i }: { t: (typeof testimonials)[0]; i: number }) {
             <span
               className="font-mono text-[9px] px-2.5 py-1 rounded-full border tracking-wide"
               style={{
-                color: "rgba(0,212,160,0.7)",
-                borderColor: "rgba(0,212,160,0.15)",
-                background: "rgba(0,212,160,0.06)",
+                color: "rgba(2,201,120,0.7)",
+                borderColor: "rgba(2,201,120,0.15)",
+                background: "rgba(2,201,120,0.06)",
               }}
             >
               {t.highlight}
@@ -112,7 +112,7 @@ function TestimonialCard({ t, i }: { t: (typeof testimonials)[0]; i: number }) {
           {/* Quote mark */}
           <div
             className="text-5xl leading-none mb-2 font-serif select-none"
-            style={{ color: "rgba(0,212,160,0.15)" }}
+            style={{ color: "rgba(2,201,120,0.15)" }}
           >
             &ldquo;
           </div>
@@ -127,7 +127,7 @@ function TestimonialCard({ t, i }: { t: (typeof testimonials)[0]; i: number }) {
             className="my-5 h-px"
             style={{
               background:
-                "linear-gradient(to right, rgba(0,212,160,0.15), transparent)",
+                "linear-gradient(to right, rgba(2,201,120,0.15), transparent)",
             }}
           />
 
@@ -137,9 +137,9 @@ function TestimonialCard({ t, i }: { t: (typeof testimonials)[0]; i: number }) {
             <div
               className="w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0"
               style={{
-                background: "rgba(0,212,160,0.1)",
-                border: "1px solid rgba(0,212,160,0.2)",
-                color: "#00D4A0",
+                background: "rgba(2,201,120,0.1)",
+                border: "1px solid rgba(2,201,120,0.2)",
+                color: "#02c978",
               }}
             >
               {t.initials}
@@ -171,7 +171,7 @@ export default function Testimonials() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse, rgba(0,212,160,0.06) 0%, transparent 65%)",
+            "radial-gradient(ellipse, rgba(2,201,120,0.06) 0%, transparent 65%)",
           filter: "blur(60px)",
         }}
       />
@@ -213,10 +213,10 @@ export default function Testimonials() {
               {["CM", "LS", "MF", "PV"].map((init, i) => (
                 <div
                   key={i}
-                  className="w-7 h-7 rounded-full border-2 border-[#06080B] flex items-center justify-center font-mono text-[8px] font-bold"
+                  className="w-7 h-7 rounded-full border-2 border-[#080b0a] flex items-center justify-center font-mono text-[8px] font-bold"
                   style={{
-                    background: `rgba(0,212,160,${0.08 + i * 0.03})`,
-                    color: "#00D4A0",
+                    background: `rgba(2,201,120,${0.08 + i * 0.03})`,
+                    color: "#02c978",
                   }}
                 >
                   {init}

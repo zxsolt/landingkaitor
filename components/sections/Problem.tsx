@@ -60,7 +60,7 @@ export default function Problem() {
         aria-hidden="true"
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(0,212,160,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(2,201,120,0.06) 0%, transparent 70%)",
           filter: "blur(60px)",
         }}
       />
@@ -102,7 +102,7 @@ export default function Problem() {
             {pains.map((pain, i) => (
               <motion.div key={i} variants={item}>
                 <SpotlightCard
-                  className="group relative rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#00D4A0]/15 transition-colors duration-300"
+                  className="group relative rounded-2xl border border-[#F0F0F0]/5 bg-[#0E1318] hover:border-[#02c978]/15 transition-colors duration-300"
                   style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)" }}
                 >
                   <motion.div
@@ -111,7 +111,7 @@ export default function Problem() {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="mt-0.5 text-[#00D4A0] shrink-0 opacity-80">
+                      <div className="mt-0.5 text-[#02c978] shrink-0 opacity-80">
                         {pain.icon}
                       </div>
                       <div>
@@ -139,7 +139,7 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="mt-12 text-[#00D4A0] font-semibold text-base text-right max-w-6xl"
+          className="mt-12 text-[#02c978] font-semibold text-base text-right max-w-6xl"
         >
           Eso es exactamente lo que resolvemos.
         </motion.p>

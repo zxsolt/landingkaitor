@@ -73,9 +73,9 @@ function StatItem({
         className="font-black leading-none tracking-tight tabular-nums"
         style={{
           fontSize: "clamp(2.8rem, 6vw, 4.5rem)",
-          color: "#00D4A0",
+          color: "#02c978",
           textShadow: active
-            ? "0 0 80px rgba(0,212,160,0.35), 0 0 30px rgba(0,212,160,0.2)"
+            ? "0 0 80px rgba(2,201,120,0.35), 0 0 30px rgba(2,201,120,0.2)"
             : "none",
           transition: "text-shadow 0.5s ease",
         }}
@@ -118,7 +118,7 @@ export default function StatsRow() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(to right, transparent 0%, rgba(0,212,160,0.25) 30%, rgba(0,212,160,0.5) 50%, rgba(0,212,160,0.25) 70%, transparent 100%)",
+            "linear-gradient(to right, transparent 0%, rgba(2,201,120,0.25) 30%, rgba(2,201,120,0.5) 50%, rgba(2,201,120,0.25) 70%, transparent 100%)",
         }}
       />
       {/* Bottom border */}
@@ -126,7 +126,7 @@ export default function StatsRow() {
         className="absolute bottom-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(to right, transparent 0%, rgba(0,212,160,0.12) 30%, rgba(0,212,160,0.25) 50%, rgba(0,212,160,0.12) 70%, transparent 100%)",
+            "linear-gradient(to right, transparent 0%, rgba(2,201,120,0.12) 30%, rgba(2,201,120,0.25) 50%, rgba(2,201,120,0.12) 70%, transparent 100%)",
         }}
       />
 
@@ -136,7 +136,7 @@ export default function StatsRow() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 50%, rgba(0,212,160,0.05) 0%, transparent 65%)",
+            "radial-gradient(ellipse at 50% 50%, rgba(2,201,120,0.05) 0%, transparent 65%)",
         }}
       />
 
@@ -146,7 +146,7 @@ export default function StatsRow() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(0,212,160,0.06) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(2,201,120,0.06) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
           maskImage:
             "radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%)",

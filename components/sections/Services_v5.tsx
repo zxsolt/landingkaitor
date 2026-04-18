@@ -12,8 +12,8 @@ const services = [
     problem: "Tu equipo hace a mano lo que debería hacer un sistema",
     body: "Notificaciones manuales, hojas de cálculo actualizadas a mano, datos copiados de una herramienta a otra. Cada hora que eso consume es dinero que no vuelve.",
     cta: "Automatizamos el proceso",
-    topColor: "#00D4A0",
-    topColorDim: "rgba(0,212,160,0.15)",
+    topColor: "#02c978",
+    topColorDim: "rgba(2,201,120,0.15)",
   },
   {
     number: "02",
@@ -82,7 +82,7 @@ export default function ServicesV5() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,212,160,0.05) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(2,201,120,0.05) 0%, transparent 70%)",
         }}
       />
 
@@ -111,7 +111,7 @@ export default function ServicesV5() {
       <div className="hidden md:flex items-center justify-end gap-2 px-6 max-w-6xl mx-auto mb-5">
         <button
           onClick={() => scroll("left")}
-          className="w-9 h-9 rounded-full border border-[#F0F0F0]/10 flex items-center justify-center text-[#F0F0F0]/40 hover:border-[#00D4A0]/40 hover:text-[#00D4A0] transition-all duration-200"
+          className="w-9 h-9 rounded-full border border-[#F0F0F0]/10 flex items-center justify-center text-[#F0F0F0]/40 hover:border-[#02c978]/40 hover:text-[#02c978] transition-all duration-200"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -119,7 +119,7 @@ export default function ServicesV5() {
         </button>
         <button
           onClick={() => scroll("right")}
-          className="w-9 h-9 rounded-full border border-[#F0F0F0]/10 flex items-center justify-center text-[#F0F0F0]/40 hover:border-[#00D4A0]/40 hover:text-[#00D4A0] transition-all duration-200"
+          className="w-9 h-9 rounded-full border border-[#F0F0F0]/10 flex items-center justify-center text-[#F0F0F0]/40 hover:border-[#02c978]/40 hover:text-[#02c978] transition-all duration-200"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M5 2l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -254,12 +254,12 @@ export default function ServicesV5() {
           style={{
             width: "clamp(260px, 28vw, 300px)",
             height: "480px",
-            background: "linear-gradient(145deg, rgba(0,212,160,0.1) 0%, rgba(0,212,160,0.02) 100%)",
-            border: "1px solid rgba(0,212,160,0.22)",
+            background: "linear-gradient(145deg, rgba(2,201,120,0.1) 0%, rgba(2,201,120,0.02) 100%)",
+            border: "1px solid rgba(2,201,120,0.22)",
           }}
         >
           <div>
-            <span className="font-mono text-[9px] text-[#00D4A0]/60 tracking-widest uppercase block mb-5">
+            <span className="font-mono text-[9px] text-[#02c978]/60 tracking-widest uppercase block mb-5">
               Tu caso
             </span>
             <h3 className="text-xl font-black text-[#F0F0F0] leading-snug">
@@ -271,8 +271,8 @@ export default function ServicesV5() {
           </div>
           <Link
             href="#contacto"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200"
-            style={{ boxShadow: "0 0 24px rgba(0,212,160,0.3)" }}
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200"
+            style={{ boxShadow: "0 0 24px rgba(2,201,120,0.3)" }}
           >
             Cuéntanos tu caso →
           </Link>
@@ -288,9 +288,9 @@ export default function ServicesV5() {
           <motion.div
             className="h-full rounded-full"
             style={{
-              background: "#00D4A0",
+              background: "#02c978",
               width: `${Math.max(8, progress * 100)}%`,
-              boxShadow: "0 0 8px rgba(0,212,160,0.6)",
+              boxShadow: "0 0 8px rgba(2,201,120,0.6)",
             }}
             transition={{ duration: 0.1 }}
           />
@@ -304,7 +304,7 @@ export default function ServicesV5() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-10 p-8 rounded-2xl border border-[#00D4A0]/10 bg-[#00D4A0]/3 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+          className="mt-10 p-8 rounded-2xl border border-[#02c978]/10 bg-[#02c978]/3 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >
           <div>
             <p className="text-[#F0F0F0]/70 text-base font-medium">
@@ -316,8 +316,8 @@ export default function ServicesV5() {
           </div>
           <Link
             href="#contacto"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200 flex items-center gap-2"
-            style={{ boxShadow: "0 0 24px rgba(0,212,160,0.25)" }}
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200 flex items-center gap-2"
+            style={{ boxShadow: "0 0 24px rgba(2,201,120,0.25)" }}
           >
             Cuéntanos tu caso →
           </Link>

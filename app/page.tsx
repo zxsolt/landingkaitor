@@ -13,7 +13,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#06080B] text-[#F0F0F0] overflow-x-hidden">
+    <main className="min-h-screen bg-[#080b0a] text-[#f0f5f2] overflow-x-hidden">
       <GrainOverlay />
       <CustomCursor />
       <Navbar />

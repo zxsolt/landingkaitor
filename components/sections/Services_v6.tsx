@@ -51,7 +51,7 @@ export default function ServicesV6() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(0,212,160,0.04) 0%, transparent 70%)",
+            "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(2,201,120,0.04) 0%, transparent 70%)",
         }}
       />
 
@@ -89,8 +89,8 @@ export default function ServicesV6() {
               style={{
                 background:
                   i % 2 === 0
-                    ? "linear-gradient(90deg, rgba(0,212,160,0.04) 0%, transparent 60%)"
-                    : "linear-gradient(90deg, transparent 40%, rgba(0,212,160,0.04) 100%)",
+                    ? "linear-gradient(90deg, rgba(2,201,120,0.04) 0%, transparent 60%)"
+                    : "linear-gradient(90deg, transparent 40%, rgba(2,201,120,0.04) 100%)",
               }}
             />
 
@@ -109,10 +109,10 @@ export default function ServicesV6() {
                   {/* Number + label row */}
                   <div className="flex items-center gap-3 mb-5">
                     <span
-                      className="font-mono text-[10px] text-[#00D4A0]/50 tracking-widest uppercase px-2.5 py-1 rounded-full"
+                      className="font-mono text-[10px] text-[#02c978]/50 tracking-widest uppercase px-2.5 py-1 rounded-full"
                       style={{
-                        border: "1px solid rgba(0,212,160,0.15)",
-                        background: "rgba(0,212,160,0.04)",
+                        border: "1px solid rgba(2,201,120,0.15)",
+                        background: "rgba(2,201,120,0.04)",
                       }}
                     >
                       {s.label}
@@ -136,7 +136,7 @@ export default function ServicesV6() {
                     className="w-px self-stretch my-10 group-hover:opacity-100 transition-all duration-400"
                     style={{
                       background:
-                        "linear-gradient(180deg, transparent 0%, rgba(0,212,160,0.3) 30%, rgba(0,212,160,0.3) 70%, transparent 100%)",
+                        "linear-gradient(180deg, transparent 0%, rgba(2,201,120,0.3) 30%, rgba(2,201,120,0.3) 70%, transparent 100%)",
                       opacity: 0.4,
                     }}
                   />
@@ -153,9 +153,9 @@ export default function ServicesV6() {
                   </p>
                   <Link
                     href="#contacto"
-                    className="inline-flex items-center gap-2.5 text-[#00D4A0] text-xs font-mono font-semibold hover:gap-4 transition-all duration-300 self-start"
+                    className="inline-flex items-center gap-2.5 text-[#02c978] text-xs font-mono font-semibold hover:gap-4 transition-all duration-300 self-start"
                   >
-                    <span className="w-5 h-px bg-[#00D4A0] transition-all duration-300 group-hover:w-7" />
+                    <span className="w-5 h-px bg-[#02c978] transition-all duration-300 group-hover:w-7" />
                     {s.cta}
                   </Link>
                 </div>
@@ -177,8 +177,8 @@ export default function ServicesV6() {
           className="mt-14 p-8 md:p-12 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
           style={{
             background:
-              "linear-gradient(135deg, rgba(0,212,160,0.07) 0%, rgba(0,212,160,0.02) 100%)",
-            border: "1px solid rgba(0,212,160,0.14)",
+              "linear-gradient(135deg, rgba(2,201,120,0.07) 0%, rgba(2,201,120,0.02) 100%)",
+            border: "1px solid rgba(2,201,120,0.14)",
           }}
         >
           <div>
@@ -193,8 +193,8 @@ export default function ServicesV6() {
           </div>
           <Link
             href="#contacto"
-            className="shrink-0 px-7 py-3.5 rounded-xl bg-[#00D4A0] text-[#06080B] text-sm font-bold hover:bg-[#00A87E] transition-colors duration-200 flex items-center gap-2"
-            style={{ boxShadow: "0 0 28px rgba(0,212,160,0.28)" }}
+            className="shrink-0 px-7 py-3.5 rounded-xl bg-[#02c978] text-[#080b0a] text-sm font-bold hover:bg-[#01a060] transition-colors duration-200 flex items-center gap-2"
+            style={{ boxShadow: "0 0 28px rgba(2,201,120,0.28)" }}
           >
             Cuéntanos tu caso →
           </Link>

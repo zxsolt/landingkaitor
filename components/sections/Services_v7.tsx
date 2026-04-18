@@ -71,7 +71,7 @@ export default function ServicesV7() {
           height: "800px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(0,212,160,0.32) 0%, rgba(0,180,120,0.12) 40%, transparent 68%)",
+            "radial-gradient(circle, rgba(2,201,120,0.32) 0%, rgba(0,180,120,0.12) 40%, transparent 68%)",
           filter: "blur(60px)",
         }}
       />
@@ -86,7 +86,7 @@ export default function ServicesV7() {
           height: "500px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(0,212,160,0.14) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(2,201,120,0.14) 0%, transparent 65%)",
           filter: "blur(80px)",
         }}
       />
@@ -97,7 +97,7 @@ export default function ServicesV7() {
         style={{
           height: "400px",
           background:
-            "radial-gradient(ellipse 60% 100% at 50% 0%, rgba(0,212,160,0.08) 0%, transparent 80%)",
+            "radial-gradient(ellipse 60% 100% at 50% 0%, rgba(2,201,120,0.08) 0%, transparent 80%)",
         }}
       />
 
@@ -118,7 +118,7 @@ export default function ServicesV7() {
               className="text-transparent bg-clip-text"
               style={{
                 backgroundImage:
-                  "linear-gradient(90deg, #00D4A0 0%, #00ffbe 50%, #00D4A0 100%)",
+                  "linear-gradient(90deg, #02c978 0%, #04f5a8 50%, #02c978 100%)",
               }}
             >
               el problema.
@@ -146,15 +146,15 @@ export default function ServicesV7() {
               style={{
                 background:
                   "linear-gradient(145deg, rgba(0,40,28,0.7) 0%, rgba(6,16,12,0.85) 100%)",
-                border: "1px solid rgba(0,212,160,0.12)",
+                border: "1px solid rgba(2,201,120,0.12)",
                 backdropFilter: "blur(12px)",
                 boxShadow:
-                  "inset 0 1px 0 rgba(0,212,160,0.06), 0 4px 24px rgba(0,0,0,0.3)",
+                  "inset 0 1px 0 rgba(2,201,120,0.06), 0 4px 24px rgba(0,0,0,0.3)",
               }}
               whileHover={{
                 y: -5,
                 boxShadow:
-                  "inset 0 1px 0 rgba(0,212,160,0.1), 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,212,160,0.2)",
+                  "inset 0 1px 0 rgba(2,201,120,0.1), 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(2,201,120,0.2)",
                 transition: { duration: 0.3 },
               }}
             >
@@ -163,7 +163,7 @@ export default function ServicesV7() {
                 className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
                 style={{
                   background:
-                    "radial-gradient(circle at 80% 20%, rgba(0,212,160,0.1) 0%, transparent 60%)",
+                    "radial-gradient(circle at 80% 20%, rgba(2,201,120,0.1) 0%, transparent 60%)",
                 }}
               />
 
@@ -172,16 +172,16 @@ export default function ServicesV7() {
                 <span
                   className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full"
                   style={{
-                    color: "#00D4A0",
-                    background: "rgba(0,212,160,0.08)",
-                    border: "1px solid rgba(0,212,160,0.18)",
+                    color: "#02c978",
+                    background: "rgba(2,201,120,0.08)",
+                    border: "1px solid rgba(2,201,120,0.18)",
                   }}
                 >
                   <span
                     className="w-1.5 h-1.5 rounded-full"
                     style={{
-                      background: "#00D4A0",
-                      boxShadow: "0 0 5px rgba(0,212,160,0.9)",
+                      background: "#02c978",
+                      boxShadow: "0 0 5px rgba(2,201,120,0.9)",
                     }}
                   />
                   {s.label}
@@ -202,8 +202,8 @@ export default function ServicesV7() {
               </p>
 
               {/* CTA — visible on hover */}
-              <div className="mt-5 flex items-center gap-2.5 text-[#00D4A0] text-xs font-mono font-semibold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-                <span className="w-4 h-px bg-[#00D4A0] group-hover:w-6 transition-all duration-300" />
+              <div className="mt-5 flex items-center gap-2.5 text-[#02c978] text-xs font-mono font-semibold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                <span className="w-4 h-px bg-[#02c978] group-hover:w-6 transition-all duration-300" />
                 {s.cta}
               </div>
             </motion.div>
@@ -216,15 +216,15 @@ export default function ServicesV7() {
             style={{
               background:
                 "linear-gradient(145deg, rgba(0,80,50,0.5) 0%, rgba(0,40,28,0.7) 100%)",
-              border: "1px solid rgba(0,212,160,0.28)",
+              border: "1px solid rgba(2,201,120,0.28)",
               backdropFilter: "blur(12px)",
               boxShadow:
-                "inset 0 1px 0 rgba(0,212,160,0.12), 0 4px 24px rgba(0,0,0,0.3)",
+                "inset 0 1px 0 rgba(2,201,120,0.12), 0 4px 24px rgba(0,0,0,0.3)",
             }}
             whileHover={{
               y: -5,
               boxShadow:
-                "inset 0 1px 0 rgba(0,212,160,0.18), 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,212,160,0.3)",
+                "inset 0 1px 0 rgba(2,201,120,0.18), 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(2,201,120,0.3)",
               transition: { duration: 0.3 },
             }}
           >
@@ -234,12 +234,12 @@ export default function ServicesV7() {
               className="absolute top-0 right-0 w-40 h-40 pointer-events-none rounded-tr-2xl"
               style={{
                 background:
-                  "radial-gradient(circle at top right, rgba(0,212,160,0.28) 0%, transparent 65%)",
+                  "radial-gradient(circle at top right, rgba(2,201,120,0.28) 0%, transparent 65%)",
               }}
             />
 
             <div className="relative z-10">
-              <span className="font-mono text-[10px] text-[#00D4A0]/70 tracking-widest uppercase block mb-4">
+              <span className="font-mono text-[10px] text-[#02c978]/70 tracking-widest uppercase block mb-4">
                 Tu caso
               </span>
               <h3 className="text-base font-bold text-white leading-snug">
@@ -254,8 +254,8 @@ export default function ServicesV7() {
               href="#contacto"
               className="relative z-10 mt-6 self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[#050C09] text-sm font-bold transition-all duration-200 hover:scale-105"
               style={{
-                background: "linear-gradient(135deg, #00D4A0 0%, #00ffbe 100%)",
-                boxShadow: "0 0 20px rgba(0,212,160,0.4)",
+                background: "linear-gradient(135deg, #02c978 0%, #04f5a8 100%)",
+                boxShadow: "0 0 20px rgba(2,201,120,0.4)",
               }}
             >
               Cuéntanos tu caso →
@@ -273,7 +273,7 @@ export default function ServicesV7() {
           style={{
             background:
               "linear-gradient(135deg, rgba(0,70,45,0.6) 0%, rgba(0,30,20,0.8) 100%)",
-            border: "1px solid rgba(0,212,160,0.18)",
+            border: "1px solid rgba(2,201,120,0.18)",
             backdropFilter: "blur(16px)",
           }}
         >
@@ -283,7 +283,7 @@ export default function ServicesV7() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse 70% 120% at 50% 100%, rgba(0,212,160,0.18) 0%, transparent 65%)",
+                "radial-gradient(ellipse 70% 120% at 50% 100%, rgba(2,201,120,0.18) 0%, transparent 65%)",
             }}
           />
 
@@ -299,8 +299,8 @@ export default function ServicesV7() {
               href="#contacto"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[#050C09] text-sm font-bold transition-all duration-200 hover:scale-105"
               style={{
-                background: "linear-gradient(135deg, #00D4A0 0%, #00ffbe 100%)",
-                boxShadow: "0 0 32px rgba(0,212,160,0.45)",
+                background: "linear-gradient(135deg, #02c978 0%, #04f5a8 100%)",
+                boxShadow: "0 0 32px rgba(2,201,120,0.45)",
               }}
             >
               Cuéntanos tu caso →
